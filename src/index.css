@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Ultra-sleek Esports Obsidian Scrollbars */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #1e2638;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #334155;
+  }
+}
+
+/* Tactical Glow Effects */
+.glow-crimson {
+  box-shadow: 0 0 15px rgba(255, 70, 85, 0.35);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.35);
+}
+
+.glow-green {
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.4);
+}
+
+/* Glassmorphism Panel */
+.glass-panel {
+  background: rgba(14, 19, 31, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-dock {
+  background: rgba(9, 13, 22, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(43, 53, 71, 0.7);
+}
+
+/* Discord / VCT voice speaking ring pulse */
+.voice-speaking-ring {
+  box-shadow: 0 0 0 2px #22c55e, 0 0 14px rgba(34, 197, 94, 0.65);
+  transition: box-shadow 0.12s ease-out;
+}
+
+/* Tooltip & Dropdown animation */
+@keyframes tooltipIn {
+  from {
+    opacity: 0;
+    transform: translateY(-2px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-tooltip {
+  animation: tooltipIn 0.15s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
